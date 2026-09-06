@@ -217,7 +217,7 @@ shape = SubResource("CapsuleShape2D_t7dva")
 debug_color = Color(2.117753e-06, 0.59301317, 0.74037105, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=16636718]
-limit_left = -300
-limit_top = -230
-limit_right = 300
-limit_bottom = 160
+limit_left = -1000
+limit_top = -1000
+limit_right = 2000
+limit_bottom = 1000
