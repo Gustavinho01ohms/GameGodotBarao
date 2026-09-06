@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d2cacl8x564nw"]
+
+[ext_resource type="Texture2D" uid="uid://ditg5qp3huhnc" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/1.png" id="1_42vj2"]
+[ext_resource type="Texture2D" uid="uid://cvyj5bgddgljk" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/2.png" id="2_06ata"]
+[ext_resource type="Texture2D" uid="uid://bu5xcy551j8vy" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/3.png" id="3_g6lc8"]
+[ext_resource type="Texture2D" uid="uid://bpvjaycma4547" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/4.png" id="4_reb4q"]
+[ext_resource type="Texture2D" uid="uid://mj7ocqv7scra" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/5.png" id="5_oqi4b"]
+[ext_resource type="Texture2D" uid="uid://tvd6ia2kurc0" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/6.png" id="6_i4ogu"]
+[ext_resource type="Texture2D" uid="uid://cj20wmli0d7dm" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/7.png" id="7_liux7"]
+[ext_resource type="Texture2D" uid="uid://dbfed2jpweumq" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/cavalaria/8.png" id="8_miqp0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seb6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_42vj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_06ata")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g6lc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_reb4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oqi4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i4ogu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_liux7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_miqp0")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seb6h"]
+size = Vector2(121.125, 109.5)
+
+[node name="Cavalaria" type="CharacterBody2D" unique_id=1426290137]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=673373098]
+position = Vector2(117.875, 450.04276)
+scale = Vector2(0.2507278, 0.2155539)
+sprite_frames = SubResource("SpriteFrames_seb6h")
+animation = &"walk"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1419196999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1347204771]
+position = Vector2(111.4375, 450.75)
+shape = SubResource("RectangleShape2D_seb6h")
