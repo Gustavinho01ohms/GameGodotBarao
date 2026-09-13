@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://gmxcl46f5l76"]
+
+[ext_resource type="Texture2D" uid="uid://dnq5wx738p4fv" path="res://Imagens/Tiny Swords (Enemy Pack)/Tiny Swords (Enemy Pack)/Enemy Pack/Troll/Troll_Idle.png" id="1_sbh8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epy70"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(0, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbogf"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4dvu"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(768, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2amh"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(1152, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymr3n"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(1536, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu64d"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(1920, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxdxy"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(2304, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dban"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(2688, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33jbo"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(3072, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wof7"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(3456, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuw0n"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(3840, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf733"]
+atlas = ExtResource("1_sbh8g")
+region = Rect2(4224, 0, 384, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seb6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epy70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbogf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4dvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2amh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymr3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nu64d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxdxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dban")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33jbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wof7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuw0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf733")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbh8g"]
+radius = 68.0
+height = 206.0
+
+[node name="Troll" type="CharacterBody2D" unique_id=1598382141]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120004970]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=893091056]
+sprite_frames = SubResource("SpriteFrames_seb6h")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.11682767
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=204209182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034391550]
+shape = SubResource("CapsuleShape2D_sbh8g")

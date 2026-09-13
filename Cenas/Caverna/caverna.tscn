@@ -1,0 +1,132 @@
+[gd_scene format=4 uid="uid://cibmi6bnj1mle"]
+
+[ext_resource type="Texture2D" uid="uid://cjym0vgppp7xw" path="res://Imagens/Tiny Swords (Enemy Pack)/Tiny Swords (Enemy Pack)/Enemy Pack/Extra/Cave/Cave_Idle.png" id="1_4b0uw"]
+[ext_resource type="Script" uid="uid://bx7y05gkgv3h6" path="res://Cenas/Caverna/caverna.gd" id="1_pa5ug"]
+
+[sub_resource type="TileSet" id="TileSet_x63nu"]
+physics_layer_0/collision_layer = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlaei"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmo18"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nynd4"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l6k6"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnaaw"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcfkj"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kel27"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jvxy"]
+atlas = ExtResource("1_4b0uw")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seb6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlaei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmo18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nynd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l6k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnaaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcfkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kel27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jvxy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_iwh8m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pa5ug"]
+resource_name = "respiracao"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.6, 0.6, 0.6, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ervx4"]
+_data = {
+&"RESET": SubResource("Animation_iwh8m"),
+&"respiracao": SubResource("Animation_pa5ug")
+}
+
+[node name="Caverna" type="TileMapLayer" unique_id=412860209]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD8//z/AAAFAAoAAAD8//3/AAAFAAsAAAD9//z/AAAGAAoAAAD9//3/AAAGAAsAAAD+//z/AAAHAAoAAAD+//3/AAAHAAsAAAD///z/AAAIAAoAAAD///3/AAAIAAsAAAA=")
+tile_set = SubResource("TileSet_x63nu")
+script = ExtResource("1_pa5ug")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=63287975]
+z_index = 1
+position = Vector2(79.5, -644)
+scale = Vector2(2.046875, 2.03125)
+sprite_frames = SubResource("SpriteFrames_seb6h")
+autoplay = "default"
+frame_progress = 0.93417263
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=978876575]
+libraries/ = SubResource("AnimationLibrary_ervx4")
+autoplay = &"respiracao"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1802675473]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=360185074]
+polygon = PackedVector2Array(-65, -582, -26, -630, 12, -681, 44, -710, 96, -711, 122, -703, 192, -630, 216, -609, 230, -612, 242, -594, 238, -582, 219, -569, 226, -558, 217, -534, 213, -516, 194, -503, 151, -500, 142, -497, 127, -497, 116, -505, 103, -499, 70, -506, 89, -540, 107, -567, 96, -595, 52, -611, 18, -613, -38, -527)
