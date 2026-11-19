@@ -11,7 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://d0j3wsnq7xte8" path="res://Imagens/Tiny Swords (Enemy Pack)/Tiny Swords (Enemy Pack)/Enemy Pack/Extra/Dead Tree/Dead Tree.png" id="7_nlwgu"]
 [ext_resource type="PackedScene" uid="uid://cibmi6bnj1mle" path="res://Cenas/Caverna/caverna.tscn" id="9_nlwgu"]
 [ext_resource type="PackedScene" uid="uid://cjybtd2u6dtw3" path="res://Cenas/Coleta/Coleta.tscn" id="10_rxohm"]
+[ext_resource type="Script" uid="uid://cvqxedvjyrpmo" path="res://Scripts/Componentes/VidaComponent.gd" id="11_jmoe8"]
 [ext_resource type="PackedScene" uid="uid://gmxcl46f5l76" path="res://Cenas/Troll/Troll.tscn" id="11_mry0o"]
+[ext_resource type="PackedScene" uid="uid://b6n40mu3aqsla" path="res://Cenas/Inimigos/bandido.tscn" id="12_b3f7n"]
+[ext_resource type="Script" uid="uid://dtwbmil2mfc55" path="res://Scripts/hud.gd" id="15_evgn8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1rlcm"]
 texture = ExtResource("1_8wwpk")
@@ -4149,9 +4152,16 @@ tile_set = SubResource("TileSet_xvebk")
 
 [node name="Jogador" parent="." unique_id=1563078599 instance=ExtResource("1_i3crr")]
 y_sort_enabled = true
+position = Vector2(-6, 6)
+
+[node name="VidaComponent2" type="Node" parent="Jogador" unique_id=1479178274]
+script = ExtResource("11_jmoe8")
 
 [node name="Troll" parent="." unique_id=1260435885 instance=ExtResource("11_mry0o")]
-position = Vector2(399, -83)
+position = Vector2(298, -147)
+
+[node name="Bandido" parent="." unique_id=49472042 instance=ExtResource("12_b3f7n")]
+position = Vector2(447, 90)
 
 [node name="Limites" type="Node2D" parent="." unique_id=291185896]
 visible = false
@@ -4182,3 +4192,13 @@ shape = SubResource("RectangleShape2D_seb6h")
 
 [node name="Coleta" parent="." unique_id=431608848 instance=ExtResource("10_rxohm")]
 position = Vector2(-94, 4)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1809580128]
+script = ExtResource("15_evgn8")
+
+[node name="Barravida" type="ProgressBar" parent="HUD" unique_id=921206561]
+offset_left = -202.0
+offset_top = -227.0
+offset_right = 98.0
+offset_bottom = -200.0
+show_percentage = false

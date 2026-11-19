@@ -95,8 +95,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbh8g"]
-radius = 68.0
-height = 206.0
+radius = 44.0
+height = 126.0
 
 [node name="Troll" type="CharacterBody2D" unique_id=1598382141]
 
@@ -111,4 +111,5 @@ frame_progress = 0.11682767
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=204209182]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034391550]
+position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_sbh8g")

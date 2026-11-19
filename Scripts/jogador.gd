@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
+const SPEED = 500.0
 
-@onready var anim = $AnimatedSprite2D 
+@onready var anim = $AnimatedSprite2D
+@onready var vida = $VidaComponent
+
 
 func _physics_process(_delta):
-	# O get_vector faz todo o cálculo de diagonais automaticamente
 	var direction = Input.get_vector("mover_esquerda", "mover_direita", "mover_cima", "mover_baixo")
-	
+
 	velocity = direction * SPEED
-	
+
 	if direction == Vector2.ZERO:
 		anim.play("idle")
 	else:

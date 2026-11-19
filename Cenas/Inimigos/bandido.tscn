@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://b6n40mu3aqsla"]
+
+[ext_resource type="Texture2D" uid="uid://dkcdu6xcq56q7" path="res://Imagens/Inimigos/Bandido/Thief_Idle.png" id="1_4i0pm"]
+[ext_resource type="Texture2D" uid="uid://dtu2qa50daatf" path="res://Imagens/Inimigos/Bandido/Thief_Attack.png" id="1_6dhrv"]
+[ext_resource type="Script" uid="uid://cl2i03nhnvhqh" path="res://Cenas/Inimigos/bandido.gd" id="1_yctba"]
+[ext_resource type="Texture2D" uid="uid://cervafb6mcdyo" path="res://Imagens/Inimigos/Bandido/Thief_Run.png" id="2_rju3a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chsoa"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qixvg"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pdix"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghiku"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr32c"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2swx"]
+atlas = ExtResource("1_6dhrv")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rju3a"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dhrv"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yctba"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk4qs"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyocg"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8co8i"]
+atlas = ExtResource("1_4i0pm")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acr64"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrx1h"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gch6t"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3bmg"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7400"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bprv"]
+atlas = ExtResource("2_rju3a")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igl3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chsoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qixvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pdix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghiku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr32c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2swx")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rju3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dhrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yctba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk4qs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyocg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8co8i")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acr64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrx1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gch6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3bmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7400")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bprv")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ah6ut"]
+radius = 14.0
+height = 36.0
+
+[node name="Bandido" type="CharacterBody2D" unique_id=49472042]
+script = ExtResource("1_yctba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1546076882]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_igl3b")
+animation = &"run"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=93912059]
+position = Vector2(4, 1)
+shape = SubResource("CapsuleShape2D_ah6ut")

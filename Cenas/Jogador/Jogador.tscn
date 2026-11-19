@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dm0hge3xsoqvu" path="res://Scripts/jogador.gd" id="1_l1jtt"]
 [ext_resource type="Texture2D" uid="uid://dbd0fbijttqyp" path="res://Imagens/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_l6m0d"]
+[ext_resource type="Script" uid="uid://cvqxedvjyrpmo" path="res://Scripts/Componentes/VidaComponent.gd" id="3_y11ry"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y11ry"]
 atlas = ExtResource("2_l6m0d")
@@ -195,10 +196,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7dva"]
-radius = 40.0
-height = 130.0
+radius = 14.0
+height = 54.0
 
-[node name="Jogador" type="CharacterBody2D" unique_id=1192448090]
+[node name="Jogador" type="CharacterBody2D" unique_id=1192448090 groups=["jogador"]]
 script = ExtResource("1_l1jtt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1559349814]
@@ -212,12 +213,16 @@ sprite_frames = SubResource("SpriteFrames_seb6h")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537433343]
-position = Vector2(6, -1)
+position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_t7dva")
 debug_color = Color(2.117753e-06, 0.59301317, 0.74037105, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=16636718]
+position = Vector2(-1, 2)
 limit_left = -1000
 limit_top = -1000
 limit_right = 2000
 limit_bottom = 1000
+
+[node name="VidaComponent" type="Node" parent="." unique_id=140670523]
+script = ExtResource("3_y11ry")
